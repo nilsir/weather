@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of the nilsir/weather.
  *
@@ -52,9 +53,9 @@ class WeatherTest extends TestCase
         $client = \Mockery::mock(Client::class);
         $client->allows()->get('https://restapi.amap.com/v3/weather/weatherInfo', [
             'query' => [
-                'key'        => 'mock-key',
-                'city'       => '深圳',
-                'output'     => 'json',
+                'key' => 'mock-key',
+                'city' => '深圳',
+                'output' => 'json',
                 'extensions' => 'base',
             ],
         ])->andReturn($response);
@@ -69,10 +70,10 @@ class WeatherTest extends TestCase
         $client = \Mockery::mock(Client::class);
         $client->allows()->get('https://restapi.amap.com/v3/weather/weatherInfo', [
             'query' => [
-                'key'        => 'mock-key',
-                'city'       => '深圳',
+                'key' => 'mock-key',
+                'city' => '深圳',
                 'extensions' => 'all',
-                'output'     => 'xml',
+                'output' => 'xml',
             ],
         ])->andReturn($response);
 
@@ -126,7 +127,7 @@ class WeatherTest extends TestCase
         // 断言正确传参并返回
         $this->assertSame(['success' => true], $w->getLiveWeather('深圳'));
     }
-    
+
     public function testGetForcastsWeather()
     {
         // 将 getWeather 接口模拟为返回固定内容，以测试参数传递是否正确
