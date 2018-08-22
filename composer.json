@@ -1,0 +1,12 @@
+{
+    "name": "nilsir/weather",
+    "description": "a weather sdk of gaode",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nilsir",
+            "email": "nilsir@qq.com"
+        }
+    ],
+    "require": {}
+}
